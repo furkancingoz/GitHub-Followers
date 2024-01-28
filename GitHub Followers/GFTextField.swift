@@ -36,6 +36,8 @@ class GFTextField: UITextField {
     backgroundColor = .tertiarySystemBackground
     autocorrectionType = .no //auto correction off
     placeholder = "Enter user name"
+    returnKeyType = .go
+
 
 
   }
