@@ -19,6 +19,7 @@ class SearchVC: UIViewController {
       configureLogoImageView()
       configureTextField()
       confiugreButton()
+      createDismissKeyboardTapGesture()
     }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +28,11 @@ class SearchVC: UIViewController {
 
   }
 
+
+  func createDismissKeyboardTapGesture(){
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
+  }
 
 private  func configureLogoImageView(){
     view.addSubview(logoImageView)
