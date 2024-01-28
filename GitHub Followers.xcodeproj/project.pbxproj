@@ -68,21 +68,61 @@
 		659110642B646FE7003D7713 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
-				659110652B646FE7003D7713 /* AppDelegate.swift */,
-				659110672B646FE7003D7713 /* SceneDelegate.swift */,
-				659110792B6476F7003D7713 /* SearchVC.swift */,
-				6555E3CD2B65AAC60000FBD3 /* GFButton.swift */,
-				6555E3CF2B65ADB40000FBD3 /* GFTextField.swift */,
-				6591107B2B64771E003D7713 /* FavoritesListVC.swift */,
-				659DBD472B667F3600B0D936 /* FollowersListVC.swift */,
-				659DBD4C2B66879900B0D936 /* GFTitleLabel.swift */,
-				659DBD4E2B66898D00B0D936 /* GFBodyLabel.swift */,
-				659DBD502B668A7300B0D936 /* GFAlertVC.swift */,
-				659DBD522B6690B400B0D936 /* UIViewController+Ext.swift */,
-				6591106E2B646FE8003D7713 /* Assets.xcassets */,
-				659110732B646FE8003D7713 /* Info.plist */,
+				659DBD552B66D95B00B0D936 /* Custom Views */,
+				659DBD542B66D91D00B0D936 /* Screen */,
+				659DBD572B66D99E00B0D936 /* Extensions */,
+				659DBD582B66DA1200B0D936 /* Support */,
 			);
 			path = "GitHub Followers";
+			sourceTree = "<group>";
+		};
+		659DBD542B66D91D00B0D936 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				659110792B6476F7003D7713 /* SearchVC.swift */,
+				6591107B2B64771E003D7713 /* FavoritesListVC.swift */,
+				659DBD472B667F3600B0D936 /* FollowersListVC.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		659DBD552B66D95B00B0D936 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				659DBD502B668A7300B0D936 /* GFAlertVC.swift */,
+				6555E3CD2B65AAC60000FBD3 /* GFButton.swift */,
+				6555E3CF2B65ADB40000FBD3 /* GFTextField.swift */,
+				659DBD562B66D99000B0D936 /* Label */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		659DBD562B66D99000B0D936 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				659DBD4C2B66879900B0D936 /* GFTitleLabel.swift */,
+				659DBD4E2B66898D00B0D936 /* GFBodyLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		659DBD572B66D99E00B0D936 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				659DBD522B6690B400B0D936 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		659DBD582B66DA1200B0D936 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6591106E2B646FE8003D7713 /* Assets.xcassets */,
+				659110732B646FE8003D7713 /* Info.plist */,
+				659110652B646FE7003D7713 /* AppDelegate.swift */,
+				659110672B646FE7003D7713 /* SceneDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
