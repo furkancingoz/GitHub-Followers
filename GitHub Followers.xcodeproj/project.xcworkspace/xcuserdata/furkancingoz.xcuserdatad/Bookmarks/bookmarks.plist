@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>30</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
 					<string>22</string>
 					<key>StartingColumnNumber</key>
-					<string>29</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>22</string>
+					<string>21</string>
 					<key>Timestamp</key>
-					<string>729271411.262989</string>
+					<string>729293758.139662</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,15 +34,62 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string></string>
+				<string>            completed(.failure(.invalidUsername))
+</string>
 				<key>leading</key>
 				<string>
           guard let url = URL(string: endpoint) else {
-            completed(nil, .invalidUsername)</string>
+</string>
 				<key>trailing</key>
-				<string>
-              return
+				<string>              return
           }
+
+</string>
+			</dict>
+			<key>title</key>
+			<string>username check</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>58</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>57</string>
+					<key>Timestamp</key>
+					<string>729293953.940223</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>GitHub Followers/Manager/NetworkManager.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>          task.resume()
+</string>
+				<key>leading</key>
+				<string>          }
+
+</string>
+				<key>trailing</key>
+				<string>      }
+  }
 </string>
 			</dict>
 			<key>type</key>
