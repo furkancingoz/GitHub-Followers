@@ -31,11 +31,24 @@ class FollowersListVC: UIViewController {
   }
 
   func configureCollectionView(){
-    collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewLayout())
+    collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
     view.addSubview(collectionView)
     collectionView.backgroundColor = .systemCyan
     collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
   }
+
+
+  func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout{
+    let width = view.bounds.width
+    let padding: CGFloat = 12
+    let minumumItemSpacing: CGFloat = 10
+    let availableWidth = width - (padding * 2) - (minumumItemSpacing * 2)
+    let itemWidth = availableWidth / 3
+
+
+    return UICollectionViewFlowLayout()
+  }
+
 
   func getFollowers(){
     NetworkManager.shared.getFollowers(for: username, page: 1) { result in
