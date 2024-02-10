@@ -45,9 +45,10 @@ class FollowersListVC: UIViewController {
     let availableWidth = width - (padding * 2) - (minumumItemSpacing * 2)
     let itemWidth = availableWidth / 3
 
-
-    return UICollectionViewFlowLayout()
-  }
+    let flowLayout = UICollectionViewFlowLayout()
+    flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+    flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
+    return flowLayout  }
 
 
   func getFollowers(){
