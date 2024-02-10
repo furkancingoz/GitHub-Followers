@@ -16,9 +16,9 @@ class FollowersListVC: UIViewController {
 
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
-    NetworkManager.shared.getFollowers(for: username, page: 1) { flwrs, errr in
+    NetworkManager.shared.getFollowers(for: username, page: 1) { flwrs, errorMessage in
       guard let followers = flwrs else {
-        self.presentGFAlertOnMainThread(title: "TEST", message: errr!, buttonTitle: "OK")
+        self.presentGFAlertOnMainThread(title: "Bad things happend", message: errorMessage!.rawValue, buttonTitle: "OK")
         return
       }
 
