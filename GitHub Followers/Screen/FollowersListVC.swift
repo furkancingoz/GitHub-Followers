@@ -9,14 +9,20 @@ import UIKit
 
 class FollowersListVC: UIViewController {
 
+  enum Section {
+    case main
+  }
+
   var username: String!
   var collectionView : UICollectionView!
+  var dataSource : UICollectionViewDiffableDataSource<Section, Follower>!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     configureCollectionView()
     configureViewController()
     getFollowers()
+    configureDataSoure()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -63,4 +69,14 @@ class FollowersListVC: UIViewController {
       }
     }
   }
+
+
+  func configureDataSoure(){
+    dataSource = UICollectionViewDiffableDataSource<Section,Follower>(collectionView: collectionView, cellProvider: { collectionView, indexPath, follower in
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
+      cell.set(follower: follower)
+      return cell
+    })
+  }
+
 }
