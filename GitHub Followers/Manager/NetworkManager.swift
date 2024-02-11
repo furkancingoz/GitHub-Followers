@@ -1,60 +1,59 @@
-  //
-  //  NetworkManager.swift
-  //  GitHub Followers
-  //
-  //  Created by Furkan Cingöz on 4.02.2024.
-  //
+//
+//  NetworkManager.swift
+//  GitHub Followers
+//
+//  Created by Furkan Cingöz on 4.02.2024.
+//
 
-  import Foundation
-
-
-  class NetworkManager {
-      static let shared   = NetworkManager()
-      let baseURL         = "https://api.github.com/users/"
-
-      private init() {}
+import UIKit
 
 
-      func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
-          let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
+class NetworkManager {
+  static let shared = NetworkManager()
+  private let baseURL = "https://api.github.com/users/"
+  let cache = NSCache<NSString, UIImage>()
+  private init() {}
 
-          guard let url = URL(string: endpoint) else {
-            completed(.failure(.invalidUsername))
-              return
-          }
+  func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
+    let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
 
-          let task = URLSession.shared.dataTask(with: url) { data, response, error in
+    guard let url = URL(string: endpoint) else {
+      completed(.failure(.invalidUsername))
+      return
+    }
 
-              if let _ = error {
-                completed(.failure(.unableToComplete))
-                  return
-              }
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
 
-            guard let response = response as? HTTPURLResponse else {
-              completed(.failure(.invalidResponse))
-                return
-            }
-            print("Status Code: \(response.statusCode)")
-            guard response.statusCode == 200 else {
-              completed(.failure(.invalidResponse))
-                return
-            }
-
-              guard let data = data else {
-                completed(.failure(.invalidData))
-                  return
-              }
-
-              do {
-                  let decoder = JSONDecoder()
-                  decoder.keyDecodingStrategy = .convertFromSnakeCase
-                  let followers = try decoder.decode([Follower].self, from: data)
-                completed(.success(followers))
-              } catch {
-                completed(.failure(.invalidResponse))
-              }
-          }
-
-          task.resume()
+      if let _ = error {
+        completed(.failure(.unableToComplete))
+        return
       }
+
+      guard let response = response as? HTTPURLResponse else {
+        completed(.failure(.invalidResponse))
+        return
+      }
+      print("Status Code: \(response.statusCode)")
+      guard response.statusCode == 200 else {
+        completed(.failure(.invalidResponse))
+        return
+      }
+
+      guard let data = data else {
+        completed(.failure(.invalidData))
+        return
+      }
+
+      do {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let followers = try decoder.decode([Follower].self, from: data)
+        completed(.success(followers))
+      } catch {
+        completed(.failure(.invalidResponse))
+      }
+    }
+
+    task.resume()
   }
+}

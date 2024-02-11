@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>22</string>
+					<string>21</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>21</string>
+					<string>20</string>
 					<key>Timestamp</key>
-					<string>729293758.139662</string>
+					<string>729344592.084363</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,15 +34,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>            completed(.failure(.invalidUsername))
+				<string>      completed(.failure(.invalidUsername))
 </string>
 				<key>leading</key>
 				<string>
-          guard let url = URL(string: endpoint) else {
+    guard let url = URL(string: endpoint) else {
 </string>
 				<key>trailing</key>
-				<string>              return
-          }
+				<string>      return
+    }
 
 </string>
 			</dict>
@@ -59,13 +59,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>58</string>
+					<string>57</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>57</string>
+					<string>56</string>
 					<key>Timestamp</key>
-					<string>729293953.940223</string>
+					<string>729344592.084406</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -81,15 +81,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>          task.resume()
+				<string>    task.resume()
 </string>
 				<key>leading</key>
-				<string>          }
+				<string>    }
 
 </string>
 				<key>trailing</key>
-				<string>      }
-  }
+				<string>  }
+}
 </string>
 			</dict>
 			<key>type</key>
