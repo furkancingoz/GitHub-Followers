@@ -24,7 +24,7 @@ class FollowerCell: UICollectionViewCell {
 
   func set(follower : Follower){
     usernameLabel.text = follower.login
-    avatarImageView.image = UIImage(named: follower.avatarUrl)
+    avatarImageView.downloadImage(from: follower.avatarUrl)
   }
 
   private func configure(){
@@ -32,7 +32,6 @@ class FollowerCell: UICollectionViewCell {
     addSubview(usernameLabel)
 
     let padding : CGFloat = 8
-//translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: padding),
       avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: padding),

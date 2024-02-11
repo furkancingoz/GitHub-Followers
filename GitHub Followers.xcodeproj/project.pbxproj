@@ -114,11 +114,11 @@
 		659DBD552B66D95B00B0D936 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				659DBD562B66D99000B0D936 /* Label */,
 				65FB96C82B782B74001D4145 /* Cell */,
 				659DBD502B668A7300B0D936 /* GFAlertVC.swift */,
 				6555E3CD2B65AAC60000FBD3 /* GFButton.swift */,
 				6555E3CF2B65ADB40000FBD3 /* GFTextField.swift */,
-				659DBD562B66D99000B0D936 /* Label */,
 				65FB96CB2B782C13001D4145 /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";

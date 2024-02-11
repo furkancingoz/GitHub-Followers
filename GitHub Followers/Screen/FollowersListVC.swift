@@ -30,7 +30,7 @@ class FollowersListVC: UIViewController {
   }
 
   private func configureViewController(){
-    view.backgroundColor = .systemBackground
+    view.backgroundColor = .systemPink
     navigationController?.navigationBar.prefersLargeTitles = true
 
   }
@@ -38,7 +38,7 @@ class FollowersListVC: UIViewController {
   func configureCollectionView(){
     collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
     view.addSubview(collectionView)
-    collectionView.backgroundColor = .systemBackground
+    collectionView.backgroundColor = .systemPink
     collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
   }
 
