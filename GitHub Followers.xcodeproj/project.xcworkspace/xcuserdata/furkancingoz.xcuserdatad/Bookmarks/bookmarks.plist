@@ -95,6 +95,53 @@
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>46</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>45</string>
+					<key>Timestamp</key>
+					<string>729341739.34053</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>GitHub Followers/Screen/FollowersListVC.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>    NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in
+</string>
+				<key>leading</key>
+				<string>
+  func getFollowers(){
+</string>
+				<key>trailing</key>
+				<string>      guard let self = self else { return }
+
+      switch result {
+</string>
+			</dict>
+			<key>title</key>
+			<string>weak self</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
 	</array>
 </dict>
 </plist>
